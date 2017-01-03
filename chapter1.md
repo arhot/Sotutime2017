@@ -1,9 +1,9 @@
 ---
-title       : Visualisaatiot #1
+title       : Perustyökaluja
 description : R for Data Science Chapter 3
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:ee4f3bacf1
-## A really bad movie
+--- type:NormalExercise lang:r xp:50 skills:1 key:ee4f3bacf1
+## Assign
 
 Have a look at the plot that showed up in the viewer to the right. Which type of movie has the worst rating assigned to it?
 
@@ -38,7 +38,7 @@ test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:8fac4da90d
-## More movies
+## Perusfunktiot 
 
 In the previous exercise, you saw a dataset about movies. In this exercise, we'll have a look at yet another dataset about movies!
 
@@ -111,4 +111,169 @@ test_function("plot", args = "col")
 test_error()
 
 success_msg("Good work!")
+```
+--- type:NormalExercise lang:r xp:100 skills:1 key:3a496c24ee
+## Filter
+
+*** =pre_exercise_code
+```{r}
+# The pre exercise code runs code to initialize the user's workspace.
+# You can use it to load packages, initialize datasets and draw a plot in the viewer
+
+movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
+library(ggplot2)
+library(dplyr)
+library(tidyverse)
+
+ggplot(movies, aes(x = runtime, y = rating, col = genre)) + geom_point()
+```
+
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:9d303343ab
+## Muuttujatyypit
+
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
+
+```
+--- type:NormalExercise lang:r xp:100 skills:1 key:7e753c2042
+## Arrange
+
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
+
+```
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:e3ba9a0de4
+## Select
+
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
+
+```
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:05f64e585f
+## Mutate
+
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
+
+```
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:6913b2ddd9
+## Summarise
+
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
+
 ```
