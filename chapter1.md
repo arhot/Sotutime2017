@@ -3,15 +3,11 @@ title       : Perustyökaluja
 description : R for Data Science Chapter 3
 
 --- type:NormalExercise lang:r xp:50 skills:1 key:ee4f3bacf1
-## Assign
+## Perusfunktiot 
 
-Have a look at the plot that showed up in the viewer to the right. Which type of movie has the worst rating assigned to it?
 
 *** =instructions
-- Adventure
-- Action
-- Animation
-- Comedy
+
 
 *** =hint
 Have a look at the plot. Which color does the point with the lowest rating have?
@@ -21,11 +17,10 @@ Have a look at the plot. Which color does the point with the lowest rating have?
 # The pre exercise code runs code to initialize the user's workspace.
 # You can use it to load packages, initialize datasets and draw a plot in the viewer
 
-movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
-
+library(haven)
 library(ggplot2)
 
-ggplot(movies, aes(x = runtime, y = rating, col = genre)) + geom_point()
+ESS2014 <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/course_2409/datasets/ESS2014.sav")
 ```
 
 *** =sct
@@ -38,7 +33,7 @@ test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:8fac4da90d
-## Perusfunktiot 
+## Argumentit
 
 In the previous exercise, you saw a dataset about movies. In this exercise, we'll have a look at yet another dataset about movies!
 
@@ -111,6 +106,36 @@ test_function("plot", args = "col")
 test_error()
 
 success_msg("Good work!")
+```
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:0ce38c3888
+## Objektit
+
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
+
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:3a496c24ee
 ## Filter
