@@ -27,18 +27,35 @@ summary(ESS2014$f3_1)
 
 table(ESS2014$f3_1)
 
-# Tee yhteenveto ja taulukko muuttujasta Kuinka onnellinen yleisesti ottaen olette?
+# Tee yhteenveto muuttujasta Kuinka onnellinen yleisesti ottaen olette?
 
+
+# Tee taulukko muuttujasta Kuinka onnellinen yleisesti ottaen olette?
 
 
 ```
+***=solution
+```{r}
+# ESS2014 on ladattuna  
+
+summary(ESS2014$f3_1)
+
+table(ESS2014$f3_1)
+
+# Tee yhteenveto muuttujasta Kuinka onnellinen yleisesti ottaen olette?
+summary(ESS2014$c1)
+
+## Tee taulukko muuttujasta Kuinka onnellinen yleisesti ottaen olette?
+
+table(ESS2014$c1)
+```
+
 *** =sct
 ```{r}
-test_function("summary", args = "object")
-              # not_called_msg = "Muista tehdä summary()",
-              # args_not_specified_msg = "Muista määritellä, mistä tehdään yhteenveto - `x`?",
-              # incorrect_msg = "Onko suluissa aineisto$muuttujannimi? Tarkista isot ja pienet kirjaimet ja välit")
-             
+test_function("summary", args = "object", not_called_msg = "Muista tehdä summary()",
+              args_not_specified_msg = "Muista määritellä, mistä tehdään yhteenveto - `x`?",
+              incorrect_msg = "Onko suluissa aineisto$muuttujannimi? Tarkista isot ja pienet kirjaimet ja välit")
+
 test_error()
 success_msg("Hyvin meni!")
 ```
