@@ -22,8 +22,10 @@ library(ggplot2)
 
 ESS2014 <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/course_2409/datasets/ESS2014.sav")
 
-ggplot(data=ESS2014) +
-  geom_point(mapping=aes(x=f3_1, y=Tulot, color=as_factor(KotitaloudenKoko)))
+
+class(ESS2014)
+
+class(ESS2014$f3_1
 ```
 
 *** =sct
