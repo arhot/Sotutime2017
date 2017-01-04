@@ -5,36 +5,40 @@ description : R for Data Science Chapter 3
 --- type:NormalExercise lang:r xp:50 skills:1 key:ee4f3bacf1
 ## Perusfunktiot 
 
-
 *** =instructions
 
+Hyviä perusfunktiota ovat esimerkiksi summary() ja table(). Näihin ei tarvitse muuta kuin kertoa, mistä halutaan yhteenveto tai taulukko. 
 
 *** =hint
-Have a look at the plot. Which color does the point with the lowest rating have?
 
 *** =pre_exercise_code
 ```{r}
-# The pre exercise code runs code to initialize the user's workspace.
-# You can use it to load packages, initialize datasets and draw a plot in the viewer
-
 library(haven)
 library(ggplot2)
 
-ESS2014 <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/course_2409/datasets/ESS2014.sav")
-
-
-class(ESS2014)
-
-class(ESS2014$f3_1
+ESS2014 <- read_sav("http://s3.amazonaws.com/assets.datacamp.com/production/course_2409/datasets/ESS2014.sav")
 ```
 
+*** =sample_code
+```{r}
+# ESS2014 on ladattuna  
+
+summary(ESS2014$f3_1)
+
+table(ESS2014$f3_1)
+
+# Tee yhteenveto ja taulukko muuttujasta Kuinka onnellinen yleisesti ottaen olette?
+
+
+
+```
 *** =sct
 ```{r}
-# SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
-
-msg_bad <- "That is not correct!"
-msg_success <- "Exactly! There seems to be a very bad action movie in the dataset."
-test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
+test_function("summary", args = "object",
+              not_called_msg = "Muista tehdä summary()",
+              args_not_specified_msg = "Muista määritellä, mistä tehdään yhteenveto - `x`?",
+              incorrect_msg = "Onko suluissa aineisto$muuttujannimi? Tarkista isot ja pienet kirjaimet ja välit"))
+)
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:8fac4da90d
