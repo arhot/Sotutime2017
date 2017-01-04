@@ -46,18 +46,22 @@ table(ESS2014$f3_1)
 summary(ESS2014$c1)
 
 ## Tee taulukko muuttujasta Kuinka onnellinen yleisesti ottaen olette?
-
 table(ESS2014$c1)
+
 ```
 
 *** =sct
 ```{r}
-test_function("summary", args="object", 
-            not_called_msg = "Muista tehdä summary()",
-            args_not_specified_msg = "Muista määritellä, mistä tehdään yhteenveto - `object`?",
-            incorrect_msg = "Onko suluissa aineisto$muuttujannimi? Tarkista isot ja pienet kirjaimet ja välit")
+test_function("summary", index=2, args="object", 
+            not_called_msg = "Muista tehda `summary()`",
+            args_not_specified_msg = "Muista maaritella, mista tehdaan yhteenveto - `object`?",
+            incorrect_msg = "Onko summary() -suluissa aineisto$muuttujannimi? Tarkista isot ja pienet kirjaimet ja valit")
+            
+test_function("table", index=2, args="x", 
+            not_called_msg = "Muista tehda `table()`",
+            args_not_specified_msg = "Muista maaritella, mista tehdaan taulukko - `x`?",
+            incorrect_msg = "Onko table() -suluissa aineisto$muuttujannimi? Tarkista isot ja pienet kirjaimet ja valit")
 
-test_error()
 success_msg("Hyvin meni!")
 ```
 
