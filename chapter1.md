@@ -34,10 +34,10 @@ table(ESS2014$f3_1)
 ```
 *** =sct
 ```{r}
-test_function("summary", args = "object",
-              not_called_msg = "Muista tehdä summary()",
-              args_not_specified_msg = "Muista määritellä, mistä tehdään yhteenveto - `x`?",
-              incorrect_msg = "Onko suluissa aineisto$muuttujannimi? Tarkista isot ja pienet kirjaimet ja välit")
+test_function("summary", args = "object")
+              # not_called_msg = "Muista tehdä summary()",
+              # args_not_specified_msg = "Muista määritellä, mistä tehdään yhteenveto - `x`?",
+              # incorrect_msg = "Onko suluissa aineisto$muuttujannimi? Tarkista isot ja pienet kirjaimet ja välit")
              
 test_error()
 success_msg("Hyvin meni!")
